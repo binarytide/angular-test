@@ -1,0 +1,17 @@
+<section class="details">
+  <div class="col-sm-offset-4 col-sm-4" ng-model="artists" style="margin-top: 20px;">
+    <div class="panel panel-default">
+    <div class="panel-heading">{{artists[whichItem].name}}</div>
+    <div class="panel-body">
+      <img ng-src="http://gravatar.com/avatar/{{artists[whichItem].hash}}?d=monsterid" alt="Photo of {{item.name}}">
+      {{artists[whichItem].title}} - {{artists[whichItem].renown}}
+      <p>{{artists[whichItem].bio}}</p>
+    </div>
+  </div>
+  <h1></h1>
+
+
+
+  <a href="/#list">Back</a>
+  </div>
+</section>

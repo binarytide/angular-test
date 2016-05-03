@@ -1,0 +1,28 @@
+{
+  "name": "angulartest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watchify": "watchify js/main.js -o public/main.js",
+    "serve": "http-server -c 1 -a localhost",
+    "dev": "npm-run-all --parallel watchify serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "browserify": "^13.0.0",
+    "gulp": "*",
+    "gulp-browserify": "*",
+    "gulp-jshint": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "md5": "^2.1.0",
+    "npm-run-all": "^1.6.0",
+    "watchify": "^3.4.0"
+  }
+}

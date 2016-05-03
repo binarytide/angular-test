@@ -1,0 +1,33 @@
+<section class="directorylist">
+  <div class="col-sm-offset-4 col-sm-4">
+    <div class="search">
+      <h1 class="text-center">Directory</h1>
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search" autofocus ng-model="query">
+      </div>
+      <div class="form-group">
+        by:
+        <select ng-model="order">
+          <option value="name">Name</option>
+          <option value="title">Title</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>
+          <input type="radio" name="direction" ng-model="direction" checked> ascending
+        </label>
+        <label>
+          <input type="radio" name="direction" ng-model="direction" value="reverse"> descending
+        </label>
+      </div>
+    </div>
+    <ul class="artistlist list-group">
+      <li class="artist list-group-item" ng-repeat="item in artists | filter: query | orderBy: order:direction">
+        <a href="#/details/{{artists.indexOf(item)}}">
+        <img ng-src="http://gravatar.com/avatar/{{item.hash}}?d=monsterid" alt="Photo of {{item.name}}">
+        {{item.name}}, {{item.title}} - {{item.renown}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
